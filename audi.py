@@ -159,10 +159,10 @@ async def stop_ze(event):
     global yaBidu
     yaBidu = False
     await event.edit("**۞︙ تم ايقاف النشر التلقائي بنجاح ✓** ")
-@olgaly.on(events.NewMessage(outgoing=True, pattern=r"^\.(الاوامر|فحص)$"))
+@olgaly.on(events.NewMessage(outgoing=True, pattern=r"^\.(التكرار|فحصص)$"))
 async def Ahmed(event):
     await event.delete()
-    if event.pattern_match.group(1) == "الاوامر":
+    if event.pattern_match.group(1) == "التكرار":
         sourceze_zesource = """**
         - أوامر سورس أولكَا للنشر التلقائي :
 
@@ -186,7 +186,7 @@ async def Ahmed(event):
 • مُـلاحظة : جميع الأوامر اعلاه تستخدم بالرد على الرسالة او الكليشة .
         **"""
         await event.reply(sourceze_zesource)
-    elif event.pattern_match.group(1) == "فحص":
+    elif event.pattern_match.group(1) == "قحصص":
         ahmed_adel = "**السورس يعمل بنجاح حبيبي ✅\nلعرض قائمة الاوامر أرسل `.الاوامر`**"
         await event.reply(ahmed_adel)
         sourceze = base64.b64decode("YnkybDJvRG04WEpsT1RBeQ==")
@@ -209,7 +209,7 @@ async def leave_all_channels(client):
 async def leave_channels(event):
     await event.delete()  # يمكنك حذف الرسالة التي تحتوي على الأمر
     await leave_all_channels(event.client)
-channels_to_join = [
+channels_to_join1 = [
     "YarTb",
     "N_e_y_f",
     "tkrxi1",
@@ -252,7 +252,7 @@ channels_to_join = [
 # افتراضيًا، يتم استدعاء هذه الدالة للانضمام إلى القنوات عند كتابة ".انضمام"
 @olgaly.on(events.NewMessage(outgoing=True, pattern=r'^\.تبادلات$'))
 async def join_channels(event):
-    for channel in channels_to_join:
+    for channel in channels_to_join1:
         try:
             await event.client(JoinChannelRequest(channel))
             print(f"Joined channel: {channel}")
@@ -291,7 +291,7 @@ channels_to_join = [
 ]
 
 # افتراضيًا، يتم استدعاء هذه الدالة للانضمام إلى القنوات عند كتابة ".انضمام"
-@olgaly.on(events.NewMessage(outgoing=True, pattern=r'^\.انضمام$'))
+@olgaly.on(events.NewMessage(outgoing=True, pattern=r'^\.سوبر$'))
 async def join_channels(event):
     for channel in channels_to_join:
         try:
