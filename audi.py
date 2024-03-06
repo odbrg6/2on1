@@ -3,7 +3,7 @@ import base64
 import asyncio
 import logging
 from telethon import events
-from exampleconfig import *
+from config import *
 from asyncio import sleep
 from telethon.tl.functions.channels import JoinChannelRequest
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
