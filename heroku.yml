@@ -1,0 +1,3 @@
+build:
+  web: Dockerfile
+  sbb: Dockerfile.sbb
